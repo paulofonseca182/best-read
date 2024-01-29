@@ -11,9 +11,8 @@ const placeHolderList = data.slice(bookIndexStart, bookIndexEnd); // esse códig
 
 function App() {
   const [count, setCount] = useState(0);
-  const [list, setList] = useState(' ...');
   const [wishList, setWishList] = useState<BookInfoType[]>([]);
-  const [isWishList, setIsWishList] = useState(false);
+  const [isWishList, setIsWishList] = useState(true);
 
   const handleWishList = () => {
     setWishList([...wishList, data[count]]);
@@ -25,6 +24,10 @@ function App() {
     } else {
       setCount(0);
     }
+  };
+
+  const handleIsWishList = () => {
+    setIsWishList(!isWishList);
   };
 
   return (
@@ -40,15 +43,12 @@ function App() {
       </div>
 
       <div className="list-buttons">
-        <button>Exibir lista de desejos</button>
+        <button onClick={ handleIsWishList }>Exibir lista de desejos</button>
         <button>Exibir lista de leitura</button>
         <button>Exibir lista de lidos</button>
       </div>
-      <h1>
-        Lista de
-        {list}
-      </h1>
-      <BookList books={ wishList } />
+      <h1>Lista de ...</h1>
+      {isWishList && <BookList books={ wishList } /> }
     </div>
   );
 }
