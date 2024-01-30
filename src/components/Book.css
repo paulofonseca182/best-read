@@ -1,0 +1,15 @@
+.book {
+    background-color: rgba(168, 234, 234, 0.46);
+    border-radius: 15px;
+}
+
+.btn {
+    background-color: rgba(77, 110, 110, 0.46);
+    color: rgb(255, 255, 255);
+    width: 70px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.607);
+}

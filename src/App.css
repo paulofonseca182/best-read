@@ -33,10 +33,17 @@
   flex-direction: column;
   gap: 5px;
   width: 300px;
+  margin-left: 15px;
 }
 
 .selector-buttons > button {
   height: 50px;
+  border-radius: 8px;
+  border: 0px solid;
+  box-shadow: 5px 5px rgba(128, 128, 128, 0.607);
+  background-color: rgba(168, 234, 234, 0.46);
+  cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .list-buttons {
@@ -49,6 +56,11 @@
 .list-buttons > button {
   height: 50px;
   width: 400px;
+  border-radius: 8px;
+  border: 0px solid;
+  box-shadow: 5px 5px rgba(128, 128, 128, 0.607);
+  background-color: rgba(168, 234, 234, 0.46);
+  cursor: pointer;
 }
 
 .book-list {

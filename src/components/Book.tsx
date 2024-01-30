@@ -1,4 +1,5 @@
 import { BookInfoType } from '../types';
+import './Book.css';
 
 type BookProps = {
   bookInfo: BookInfoType;
@@ -25,7 +26,7 @@ export default function Book(props: BookProps) {
       )}
       {
         showButton
-        && <button onClick={ () => removeBook(id) }>Excluir</button>
+        && <button className="btn" onClick={ () => removeBook(id) }>Excluir</button>
       }
     </div>
   );
