@@ -56,10 +56,30 @@ function App() {
     }
   };
 
+  const handleRemoveWish = (bookId: number):void => {
+    const newList = wishList.filter((e) => e.id !== bookId);
+    setWishList(newList);
+  };
+
+  const handleRemoveReading = (bookId: number):void => {
+    const newList = readingList.filter((e) => e.id !== bookId);
+    setReadingList(newList);
+  };
+
+  const handleRemoveRead = (bookId: number):void => {
+    const newList = readList.filter((e) => e.id !== bookId);
+    setReadList(newList);
+  };
+
   return (
     <div className="app">
       <div className="book-selector">
-        <Book bookInfo={ data[count] } showDetails />
+        <Book
+          bookInfo={ data[count] }
+          showDetails
+          showButton={ false }
+          removeBook={ handleRemoveWish }
+        />
         <div className="selector-buttons">
           <button onClick={ handleWishList }>Adicionar à lista de desejos</button>
           <button onClick={ handleReadingList }>Adicionar à lista de leitura</button>
@@ -77,9 +97,12 @@ function App() {
         Lista de
         { nameList }
       </h1>
-      {isWishList && <BookList books={ wishList } /> }
-      {isReadingList && <BookList books={ readingList } /> }
-      {isReadList && <BookList books={ readList } /> }
+      {isWishList
+        && <BookList books={ wishList } removeBook={ handleRemoveWish } /> }
+      {isReadingList
+        && <BookList books={ readingList } removeBook={ handleRemoveReading } /> }
+      {isReadList
+        && <BookList books={ readList } removeBook={ handleRemoveRead } /> }
     </div>
   );
 }
