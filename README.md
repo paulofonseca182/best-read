@@ -1,5 +1,5 @@
 # Best Read 📘
-- Aplicação onde sao exibido livros onde o usuario os adicionam em lista de desejos, lista de leitura e lista de lidos.
+- Aplicação onde sao exibido livros onde os usuarios podem adicionar ou remover da lista de desejos, lista de leitura e lista de lidos.
 
 ## Tecnologias usadas 🚀 
 - Typescript 
